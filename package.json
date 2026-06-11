@@ -1,0 +1,55 @@
+{
+  "name": "impactlens",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ImpactLens: NGO Impact Intelligence Platform for education outcomes, intervention ROI, data quality, forecasting, and executive decision support.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "prisma generate && next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate deploy",
+    "db:push": "prisma db push",
+    "db:seed": "tsx prisma/seed.ts",
+    "data:acquire": "python3 scripts/acquire_aser_data.py",
+    "data:etl": "python3 scripts/etl.py",
+    "data:all": "python3 scripts/acquire_aser_data.py && python3 scripts/etl.py",
+    "validate:local": "node scripts/validate_project.mjs"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.9.0",
+    "@radix-ui/react-slot": "^1.2.3",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "d3": "^7.9.0",
+    "framer-motion": "^12.16.0",
+    "lucide-react": "^0.468.0",
+    "next": "^15.3.3",
+    "openai": "^5.3.0",
+    "prisma": "^6.9.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "recharts": "^2.15.3",
+    "tailwind-merge": "^2.6.0",
+    "tailwindcss-animate": "^1.0.7",
+    "zod": "^3.25.56"
+  },
+  "devDependencies": {
+    "@types/d3": "^7.4.3",
+    "@types/node": "^22.15.29",
+    "@types/react": "^19.1.6",
+    "@types/react-dom": "^19.1.5",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.28.0",
+    "eslint-config-next": "^15.3.3",
+    "postcss": "^8.5.4",
+    "tailwindcss": "^3.4.17",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=20.11.0"
+  }
+}

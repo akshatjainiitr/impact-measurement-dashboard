@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 46 52% 95%;
+  --foreground: 150 8% 14%;
+  --card: 45 48% 98%;
+  --card-foreground: 150 8% 14%;
+  --border: 42 24% 84%;
+  --muted: 43 30% 90%;
+  --muted-foreground: 151 8% 38%;
+  --primary: 159 48% 27%;
+  --primary-foreground: 43 70% 96%;
+  --accent: 174 31% 50%;
+  --accent-foreground: 153 28% 12%;
+  --success: 145 45% 38%;
+  --warning: 33 85% 52%;
+  --destructive: 4 70% 48%;
+}
+
+.dark {
+  --background: 165 40% 7%;
+  --foreground: 43 48% 94%;
+  --card: 163 35% 10%;
+  --card-foreground: 43 48% 94%;
+  --border: 164 22% 20%;
+  --muted: 164 28% 14%;
+  --muted-foreground: 43 12% 68%;
+  --primary: 164 42% 58%;
+  --primary-foreground: 165 38% 8%;
+  --accent: 176 35% 52%;
+  --accent-foreground: 165 38% 8%;
+  --success: 145 48% 56%;
+  --warning: 38 86% 58%;
+  --destructive: 4 76% 60%;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(circle at 20% 0%, rgba(90, 167, 157, 0.18), transparent 30rem),
+    radial-gradient(circle at 90% 8%, rgba(39, 98, 75, 0.18), transparent 26rem),
+    hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+::selection {
+  background: rgba(90, 167, 157, 0.35);
+}
+
+.premium-panel {
+  background: linear-gradient(145deg, rgba(255, 252, 244, 0.86), rgba(255, 255, 255, 0.56));
+  border: 1px solid rgba(39, 98, 75, 0.12);
+  box-shadow: 0 24px 70px rgba(18, 63, 50, 0.11);
+  backdrop-filter: blur(18px);
+}
+
+.dark .premium-panel {
+  background: linear-gradient(145deg, rgba(14, 44, 36, 0.82), rgba(9, 33, 27, 0.62));
+  border-color: rgba(90, 167, 157, 0.18);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.32);
+}
+
+.metric-number {
+  letter-spacing: -0.055em;
+}

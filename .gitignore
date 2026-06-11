@@ -1,0 +1,11 @@
+.next
+node_modules
+.env
+.env.local
+.vercel
+dist
+coverage
+*.log
+data/raw/*.pdf
+__pycache__/
+*.pyc

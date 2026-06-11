@@ -1,0 +1,101 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Gender {
+  Girl
+  Boy
+  NonBinary
+}
+
+enum SchoolType {
+  Government
+  GovernmentAided
+  PrivateLowFee
+}
+
+enum ProgramType {
+  TeachingAtTheRightLevel
+  MotherTongueReadingCamp
+  FoundationalMathLab
+  DigitalPracticeCircle
+  RemedialBridgeCourse
+}
+
+model StudentIntervention {
+  id                           String      @id @default(cuid())
+  studentId                    String      @unique @map("student_id")
+  district                     String
+  state                        String
+  gender                       Gender
+  age                          Int
+  schoolType                   SchoolType  @map("school_type")
+  attendancePercentage         Decimal     @map("attendance_percentage") @db.Decimal(5, 2)
+  baselineReadingScore         Decimal     @map("baseline_reading_score") @db.Decimal(5, 2)
+  endlineReadingScore          Decimal     @map("endline_reading_score") @db.Decimal(5, 2)
+  baselineMathScore            Decimal     @map("baseline_math_score") @db.Decimal(5, 2)
+  endlineMathScore             Decimal     @map("endline_math_score") @db.Decimal(5, 2)
+  programType                  ProgramType @map("program_type")
+  programStartDate             DateTime    @map("program_start_date") @db.Date
+  programEndDate               DateTime    @map("program_end_date") @db.Date
+  programCost                  Decimal     @map("program_cost") @db.Decimal(12, 2)
+  fieldWorker                  String      @map("field_worker")
+  assessmentDate               DateTime    @map("assessment_date") @db.Date
+  sourceReadingCompetencyRate  Decimal     @map("source_reading_competency_rate") @db.Decimal(5, 2)
+  sourceMathCompetencyRate     Decimal     @map("source_math_competency_rate") @db.Decimal(5, 2)
+  createdAt                    DateTime    @default(now()) @map("created_at")
+  updatedAt                    DateTime    @updatedAt @map("updated_at")
+
+  @@index([state, district])
+  @@index([programType])
+  @@index([assessmentDate])
+  @@map("student_interventions")
+}
+
+model DistrictBenchmark {
+  id                       String   @id @default(cuid())
+  state                    String
+  district                 String
+  govtSchoolEnrollmentPct  Decimal  @map("govt_school_enrollment_pct") @db.Decimal(5, 2)
+  notEnrolledPct           Decimal  @map("not_enrolled_pct") @db.Decimal(5, 2)
+  std35ReadingPct          Decimal  @map("std3_5_reading_pct") @db.Decimal(5, 2)
+  std35SubtractionPct      Decimal  @map("std3_5_subtraction_pct") @db.Decimal(5, 2)
+  std68ReadingPct          Decimal  @map("std6_8_reading_pct") @db.Decimal(5, 2)
+  std68DivisionPct         Decimal  @map("std6_8_division_pct") @db.Decimal(5, 2)
+  sourceUrl                String   @map("source_url")
+  createdAt                DateTime @default(now()) @map("created_at")
+
+  @@unique([state, district])
+  @@map("district_benchmarks")
+}
+
+model DataQualityRun {
+  id               String   @id @default(cuid())
+  generatedAt      DateTime @map("generated_at")
+  totalRecords     Int      @map("total_records")
+  missingValues    Int      @map("missing_values")
+  duplicateRecords Int      @map("duplicate_records")
+  invalidEntries   Int      @map("invalid_entries")
+  outliers         Int
+  qualityScore     Decimal  @map("quality_score") @db.Decimal(5, 2)
+  issueJson        Json     @map("issue_json")
+
+  @@map("data_quality_runs")
+}
+
+model MonthlyImpactMetric {
+  id                    String   @id @default(cuid())
+  month                 DateTime @db.Date
+  impactScore           Decimal  @map("impact_score") @db.Decimal(5, 2)
+  enrollment            Int
+  competencyAchievement Int      @map("competency_achievement")
+  cost                  Decimal  @db.Decimal(14, 2)
+
+  @@unique([month])
+  @@map("monthly_impact_metrics")
+}

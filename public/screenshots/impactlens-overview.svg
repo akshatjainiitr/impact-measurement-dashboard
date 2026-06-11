@@ -1,0 +1,42 @@
+<svg width="1440" height="1024" viewBox="0 0 1440 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1440" height="1024" fill="#fbf7ec"/>
+  <circle cx="214" cy="56" r="360" fill="#5aa79d" opacity=".14"/>
+  <circle cx="1230" cy="120" r="320" fill="#27624b" opacity=".12"/>
+  <rect x="72" y="54" width="1296" height="112" rx="34" fill="white" opacity=".78" stroke="#d7d0bd"/>
+  <rect x="101" y="82" width="56" height="56" rx="18" fill="#123f32"/>
+  <text x="181" y="98" fill="#5aa79d" font-family="Inter, Arial" font-size="13" font-weight="700" letter-spacing="4">IMPACTLENS</text>
+  <text x="181" y="130" fill="#202522" font-family="Inter, Arial" font-size="31" font-weight="700">NGO Impact Intelligence Platform</text>
+  <rect x="72" y="198" width="1296" height="286" rx="38" fill="white" opacity=".86" stroke="#d7d0bd"/>
+  <text x="114" y="258" fill="#5aa79d" font-family="Inter, Arial" font-size="14" font-weight="700" letter-spacing="4">IMPACT EFFICIENCY SCORE</text>
+  <text x="112" y="356" fill="#123f32" font-family="Inter, Arial" font-size="104" font-weight="800" letter-spacing="-8">21.84</text>
+  <text x="120" y="405" fill="#56635d" font-family="Inter, Arial" font-size="22">Students achieving competency per Rs. 1 lakh invested.</text>
+  <rect x="1012" y="236" width="300" height="212" rx="28" fill="#123f32"/>
+  <text x="1042" y="287" fill="#fbf7ec" opacity=".65" font-family="Inter, Arial" font-size="13" letter-spacing="4">MONDAY BRIEF</text>
+  <text x="1042" y="335" fill="#fbf7ec" font-family="Inter, Arial" font-size="30" font-weight="700">Scale what works.</text>
+  <text x="1042" y="382" fill="#fbf7ec" opacity=".72" font-family="Inter, Arial" font-size="17">Best proof point: Satara</text>
+  <text x="1042" y="415" fill="#fbf7ec" opacity=".72" font-family="Inter, Arial" font-size="17">Needs review: Banswara</text>
+  <g transform="translate(72 520)">
+    <rect width="198" height="140" rx="28" fill="white" opacity=".86" stroke="#d7d0bd"/>
+    <text x="28" y="48" fill="#56635d" font-family="Inter, Arial" font-size="15">Cost per Impact</text>
+    <text x="28" y="91" fill="#202522" font-family="Inter, Arial" font-size="34" font-weight="800">Rs. 4,578</text>
+  </g>
+  <g transform="translate(294 520)">
+    <rect width="198" height="140" rx="28" fill="white" opacity=".86" stroke="#d7d0bd"/>
+    <text x="28" y="48" fill="#56635d" font-family="Inter, Arial" font-size="15">Beneficiaries</text>
+    <text x="28" y="91" fill="#202522" font-family="Inter, Arial" font-size="34" font-weight="800">1,187</text>
+  </g>
+  <g transform="translate(516 520)">
+    <rect width="198" height="140" rx="28" fill="white" opacity=".86" stroke="#d7d0bd"/>
+    <text x="28" y="48" fill="#56635d" font-family="Inter, Arial" font-size="15">Completion</text>
+    <text x="28" y="91" fill="#202522" font-family="Inter, Arial" font-size="34" font-weight="800">100%</text>
+  </g>
+  <rect x="72" y="704" width="632" height="238" rx="34" fill="white" opacity=".86" stroke="#d7d0bd"/>
+  <text x="112" y="760" fill="#202522" font-family="Inter, Arial" font-size="24" font-weight="700">Learning Outcomes</text>
+  <path d="M118 884 C198 812 259 874 329 814 C410 744 492 832 654 764" stroke="#27624b" stroke-width="7" fill="none" stroke-linecap="round"/>
+  <rect x="736" y="704" width="632" height="238" rx="34" fill="white" opacity=".86" stroke="#d7d0bd"/>
+  <text x="776" y="760" fill="#202522" font-family="Inter, Arial" font-size="24" font-weight="700">Geographic Impact</text>
+  <path d="M1042 748 C1102 766 1149 812 1162 870 C1114 915 1050 917 1016 873 C984 833 991 775 1042 748Z" fill="#5aa79d" opacity=".18" stroke="#27624b"/>
+  <circle cx="1080" cy="806" r="14" fill="#27624b"/>
+  <circle cx="1036" cy="848" r="10" fill="#d79b43"/>
+  <circle cx="1118" cy="872" r="12" fill="#5aa79d"/>
+</svg>
