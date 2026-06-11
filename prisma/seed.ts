@@ -43,7 +43,12 @@ async function main() {
         studentId: record.student_id,
         district: record.district,
         state: record.state,
-        gender: record.gender === "Non-binary" ? "NonBinary" : record.gender,
+        gender:
+  record.gender === "Male"
+    ? "Boy"
+    : record.gender === "Female"
+    ? "Girl"
+    : "NonBinary",
         age: record.age,
         schoolType: schoolMap[record.school_type as keyof typeof schoolMap],
         attendancePercentage: record.attendance_percentage,
